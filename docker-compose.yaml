@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  cv:
+    image: yathrebdifallah233/cv:v1
+    ports:
+      - "8005:80"
+    restart: unless-stopped

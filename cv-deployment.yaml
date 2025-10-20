@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cv-deployment
+  labels:
+    app: cv
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cv
+  template:
+    metadata:
+      labels:
+        app: cv
+    spec:
+      containers:
+        - name: cv-container
+          image: yathrebdifallah233/cv:v1   # 🔹 remplace ici ton image Docker
+          ports:
+            - containerPort: 80
